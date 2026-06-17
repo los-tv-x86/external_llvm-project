@@ -73,7 +73,7 @@ func (t *min_tblgen) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 		out := android.PathForModuleGen(ctx, o)
 		generator := min_tblgen_outToGenerator(ctx, o)
 
-		ctx.ModuleBuild(min_tblgen_pctx, android.ModuleBuildParams{
+		ctx.Build(min_tblgen_pctx, android.BuildParams{
 			Rule:   min_tblgenRule22,
 			Input:  in,
 			Output: out,
