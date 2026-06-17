@@ -73,7 +73,7 @@ func (t *tblgen) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 		out := android.PathForModuleGen(ctx, o)
 		generator := outToGenerator(ctx, o)
 
-		ctx.ModuleBuild(pctx, android.ModuleBuildParams{
+		ctx.Build(pctx, android.BuildParams{
 			Rule:   tblgenRule22,
 			Input:  in,
 			Output: out,
